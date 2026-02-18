@@ -64,5 +64,83 @@
     "categorie": "Accompagnements",
     "fichier": "recipe_11.pdf",
     "tags": ["végé"]
+  },
+   {
+    "nom": "Tomates confites",
+    "categorie": "Pâtes",
+    "fichier": "recipe_12.pdf",
+    "tags": ["KpourKatrine", "Sauce"]
+  },
+   {
+    "nom": "Biscuits subway",
+    "categorie": "Desserts / Pâtisseries",
+    "fichier": "recipe_13.pdf",
+    "tags": []
+  },
+   {
+    "nom": "Salade d'orzo au pesto et halloumi",
+    "categorie": "Salades",
+    "fichier": "recipe_14.pdf",
+    "tags": []
+  },
+   {
+    "nom": "Crêpes fines",
+    "categorie": "Déjeuners / Brunchs",
+    "fichier": "recipe_15.pdf",
+    "tags": ["Ricardo"]
+  },
+   {
+    "nom": "Carpaccio de betteraves jaunes au saumon fumé et oeuf poché",
+    "categorie": "Entrées / Soupes",
+    "fichier": "recipe_16.pdf",
+    "tags": []
+  },
+   {
+    "nom": "Chou-fleur rôti caramélisé",
+    "categorie": "Accompagnements",
+    "fichier": "recipe_17.pdf",
+    "tags": ["Ricardo"]
+  },
+   {
+    "nom": "Jalapeno poppers",
+    "categorie": "Entrées / Soupes",
+    "fichier": "recipe_18.pdf",
+    "tags": ["Trois fois par jour"]
+  },
+   {
+    "nom": "Mini-quiches jambon et fromage",
+    "categorie": "Déjeuners / Brunchs",
+    "fichier": "recipe_19.pdf",
+    "tags": ["Trois fois par jour"]
+  },
+   {
+    "nom": "Boulettes végés",
+    "categorie": "Plats — Végétarien",
+    "fichier": "recipe_20.pdf",
+    "tags": ["végé"]
+  },
+   {
+    "nom": "Poivrons farcis à la saucisse",
+    "categorie": "Plats — Viande",
+    "fichier": "recipe_21.pdf",
+    "tags": []
+  },
+   {
+    "nom": "Pain aux bananes, sarrasin et chocolat",
+    "categorie": "Déjeuners / Brunchs",
+    "fichier": "recipe_22.pdf",
+    "tags": ["KpourKatrine"]
+  },
+   {
+    "nom": "Amaretto sour à la canneberge",
+    "categorie": "Cocktails",
+    "fichier": "recipe_23.pdf",
+    "tags": ["Ricardo"]
+  },
+   {
+    "nom": "Gâteau dans une tasse",
+    "categorie": "Desserts / Pâtisseries",
+    "fichier": "recipe_24.pdf",
+    "tags": []
   }
 ]
