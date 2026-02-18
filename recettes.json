@@ -1,39 +1,39 @@
 [
   {
-    "nom": "Crêpes au sirop d'érable",
+    "nom": "Compote de pommes",
     "categorie": "Déjeuners / Brunchs",
-    "fichier": "crepes-sirop-erable.pdf",
-    "tags": ["rapide", "sucré"]
+    "fichier": "recipe_1.pdf",
+    "tags": ["Ricardo", "pomme"]
   },
   {
-    "nom": "Omelette aux fines herbes",
-    "categorie": "Déjeuners / Brunchs",
-    "fichier": "omelette-fines-herbes.pdf",
-    "tags": ["rapide", "végé"]
+    "nom": "Gemellis au porc, au maïs et au cheddar",
+    "categorie": "Pâtes",
+    "fichier": "recipe_2.pdf",
+    "tags": ["porc", "maïs", "Ricardo"]
   },
   {
-    "nom": "Soupe à l'oignon gratinée",
+    "nom": "Pain sans pétrissage",
     "categorie": "Entrées / Soupes",
-    "fichier": "soupe-oignon.pdf",
-    "tags": ["hivernal", "classique"]
+    "fichier": "recipe_3.pdf",
+    "tags": ["Di Stasio", "pain", "DiStasio"]
   },
   {
-    "nom": "Velouté de courge butternut",
+    "nom": "Poivrons grillés",
     "categorie": "Entrées / Soupes",
-    "fichier": "veloute-courge.pdf",
-    "tags": ["automne", "végé"]
+    "fichier": "recipe_4.pdf",
+    "tags": ["poivrons", "KpourKatrine"]
   },
   {
-    "nom": "Salade niçoise",
+    "nom": "Salade de quinoa et maïs grillé",
     "categorie": "Salades",
-    "fichier": "salade-nicoise.pdf",
-    "tags": ["été", "poisson"]
+    "fichier": "recipe_5.pdf",
+    "tags": ["KpourKatrine", "quinoa", "maïs"]
   },
   {
-    "nom": "Salade César maison",
-    "categorie": "Salades",
-    "fichier": "salade-cesar.pdf",
-    "tags": ["classique"]
+    "nom": "Tasty penne",
+    "categorie": "Pâtes",
+    "fichier": "recipe_6.pdf",
+    "tags": ["Di Stasio", "penne", "épinards", "saucisses", "DiStasio"]
   },
   {
     "nom": "Pâtes carbonara",
