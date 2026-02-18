@@ -3,96 +3,65 @@
     "nom": "Compote de pommes",
     "categorie": "Déjeuners / Brunchs",
     "fichier": "recipe_1.pdf",
-    "tags": ["Ricardo", "pomme"]
+    "tags": ["Ricardo"]
   },
   {
     "nom": "Gemellis au porc, au maïs et au cheddar",
     "categorie": "Pâtes",
     "fichier": "recipe_2.pdf",
-    "tags": ["porc", "maïs", "Ricardo"]
+    "tags": ["Ricardo"]
   },
   {
     "nom": "Pain sans pétrissage",
     "categorie": "Entrées / Soupes",
     "fichier": "recipe_3.pdf",
-    "tags": ["Di Stasio", "pain", "DiStasio"]
+    "tags": ["DiStasio"]
   },
   {
     "nom": "Poivrons grillés",
     "categorie": "Accompagnements",
     "fichier": "recipe_4.pdf",
-    "tags": ["poivrons", "KpourKatrine"]
+    "tags": ["KpourKatrine"]
   },
   {
     "nom": "Salade de quinoa et maïs grillé",
     "categorie": "Salades",
     "fichier": "recipe_5.pdf",
-    "tags": ["KpourKatrine", "quinoa", "maïs"]
+    "tags": ["KpourKatrine"]
   },
   {
     "nom": "Tasty penne",
     "categorie": "Pâtes",
     "fichier": "recipe_6.pdf",
-    "tags": ["Di Stasio", "penne", "épinards", "saucisses", "DiStasio"]
+    "tags": ["épinards", "saucisses", "DiStasio"]
   },
   {
-    "nom": "test",
+    "nom": "Muffins zucchinis et bananes",
+    "categorie": "Déjeuners / Brunchs",
+    "fichier": "recipe_7.pdf",
+    "tags": ["Maman"]
+  },
+  {
+    "nom": "Houmous au chocolat",
+    "categorie": "Déjeuners / Brunchs",
+    "fichier": "recipe_8.pdf",
+    "tags": ["Trois fois par jour"]
+  },
+  {
+    "nom": "Foulet",
+    "categorie": "Plats — Végétarien",
+    "fichier": "recipe_9.pdf",
+    "tags": ["Jean-Philippe"]
+  },
+  {
+    "nom": "Biscuits cochons",
+    "categorie": "Desserts / Pâtisseries",
+    "fichier": "recipe_10.pdf",
+    "tags": ["Thomas Brault", "Toblerone"]
+  },
+  {
+    "nom": "Toasts courgettes et cheddar",
     "categorie": "Accompagnements",
-    "fichier": "pates-carbonara.pdf",
-    "tags": ["rapide", "classique"]
-  },
-  {
-    "nom": "Lasagnes à la bolognaise",
-    "categorie": "Pâtes",
-    "fichier": "lasagnes-bolognaise.pdf",
-    "tags": ["familial", "viande"]
-  },
-  {
-    "nom": "Poulet rôti au citron et thym",
-    "categorie": "Plats — Viande",
-    "fichier": "poulet-roti-citron.pdf",
-    "tags": ["classique", "dimanche"]
-  },
-  {
-    "nom": "Bœuf bourguignon",
-    "categorie": "Plats — Viande",
-    "fichier": "boeuf-bourguignon.pdf",
-    "tags": ["hivernal", "mijotage"]
-  },
-  {
-    "nom": "Filet de saumon en croûte d'herbes",
-    "categorie": "Plats — Poisson & Fruits de mer",
-    "fichier": "saumon-croute-herbes.pdf",
-    "tags": ["rapide", "élégant"]
-  },
-  {
-    "nom": "Crevettes à l'ail et beurre",
-    "categorie": "Plats — Poisson & Fruits de mer",
-    "fichier": "crevettes-ail-beurre.pdf",
-    "tags": ["rapide", "apéro"]
-  },
-  {
-    "nom": "Curry de pois chiches",
-    "categorie": "Plats — Végétarien",
-    "fichier": "curry-pois-chiches.pdf",
-    "tags": ["végé", "épicé"]
-  },
-  {
-    "nom": "Tarte aux légumes rôtis",
-    "categorie": "Plats — Végétarien",
-    "fichier": "tarte-legumes-rotis.pdf",
-    "tags": ["végé", "été"]
-  },
-  {
-    "nom": "Tarte tatin aux pommes",
-    "categorie": "Desserts / Pâtisseries",
-    "fichier": "tarte-tatin.pdf",
-    "tags": ["classique", "automne"]
-  },
-  {
-    "nom": "Fondant au chocolat",
-    "categorie": "Desserts / Pâtisseries",
-    "fichier": "fondant-chocolat.pdf",
-    "tags": ["chocolat", "rapide"]
+    "fichier": "recipe_11.pdf",
+    "tags": ["végé"]
   }
-]
