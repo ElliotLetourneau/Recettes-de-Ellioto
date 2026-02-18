@@ -40,6 +40,7 @@ mon-recueil/
 | `Plats — Viande` | |
 | `Plats — Poisson & Fruits de mer` | |
 | `Plats — Végétarien` | |
+| `Accompagnements` | |
 | `Desserts / Pâtisseries` | |
 
 > ⚠️ Respecte l'orthographe exacte de la catégorie, sinon elle apparaîtra en doublon.
