@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recettes de Ellioto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #f7f5f2;
+      --surface:   #ffffff;
+      --border:    #e8e3dc;
+      --text:      #2c2825;
+      --muted:     #9c9089;
+      --accent:    #b5652a;
+      --accent-lt: #f0e6da;
+      --tag-bg:    #f0ece6;
+      --shadow:    0 2px 16px rgba(44,40,37,0.07);
+      --radius:    12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .site-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .site-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    /* Search bar */
+    .search-wrap {
+      position: relative;
+      max-width: 520px;
+    }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    #search {
+      width: 100%;
+      padding: 0.7rem 1rem 0.7rem 2.8rem;
+      border: 1.5px solid var(--border);
+      border-radius: 50px;
+      background: var(--bg);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    #search::placeholder { color: var(--muted); }
+    #search:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(181,101,42,.12);
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR ── */
+    aside {
+      position: sticky;
+      top: 120px;
+    }
+
+    .sidebar-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .cat-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .cat-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      width: 100%;
+      padding: 0.55rem 0.9rem;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      color: var(--text);
+      cursor: pointer;
+      text-align: left;
+      transition: background .15s, color .15s;
+    }
+
+    .cat-btn .cat-icon { font-size: 1rem; flex-shrink: 0; }
+
+    .cat-btn .cat-count {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: var(--tag-bg);
+      padding: 1px 7px;
+      border-radius: 20px;
+    }
+
+    .cat-btn:hover { background: var(--accent-lt); }
+
+    .cat-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+    .cat-btn.active .cat-count {
+      background: rgba(255,255,255,.25);
+      color: #fff;
+    }
+
+    /* ── CONTENT ── */
+    main { min-width: 0; }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1.2rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+    }
+
+    /* Category sections */
+    .cat-section { margin-bottom: 2.5rem; }
+
+    .cat-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Recipe grid */
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .recipe-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.1rem 0.9rem;
+      cursor: pointer;
+      transition: box-shadow .2s, transform .2s, border-color .2s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .recipe-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .recipe-card-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .recipe-card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .recipe-card-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    /* Empty / no result */
+    .empty {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--muted);
+    }
+    .empty p { margin-top: 0.5rem; font-size: 0.9rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+      aside {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .cat-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .cat-btn { width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1 class="site-title">Recettes <em>de Ellioto</em></h1>
+    <div class="search-wrap">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input id="search" type="search" placeholder="Rechercher une recette…" autocomplete="off" />
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Sidebar -->
+  <aside>
+    <p class="sidebar-label">Catégories</p>
+    <ul class="cat-list" id="cat-list"></ul>
+  </aside>
+
+  <!-- Main -->
+  <main id="main-content"></main>
+</div>
+
+<script>
+// ─── Load recipes.json ───────────────────────────────────────────────
+let allRecipes = [];
+let activeCategory = 'Toutes';
+
+async function init() {
+  try {
+    const res = await fetch('recettes.json');
+    allRecipes = await res.json();
+  } catch(e) {
+    allRecipes = [];
+    console.warn('recettes.json introuvable ou vide.', e);
+  }
+  buildSidebar();
+  render();
+}
+
+// ─── Categories ───────────────────────────────────────────────────────
+const CATEGORY_META = {
+  'Toutes':                    { icon: '🍽️' },
+  'Déjeuners / Brunchs':       { icon: '🥞' },
+  'Entrées / Soupes':          { icon: '🥣' },
+  'Salades':                   { icon: '🥗' },
+  'Pâtes':                     { icon: '🍝' },
+  'Plats — Viande':            { icon: '🥩' },
+  'Plats — Poisson & Fruits de mer': { icon: '🐟' },
+  'Plats — Végétarien':        { icon: '🌿' },
+  'Desserts / Pâtisseries':    { icon: '🍰' },
+};
+
+function getCategories() {
+  const cats = ['Toutes'];
+  allRecipes.forEach(r => {
+    if (!cats.includes(r.categorie)) cats.push(r.categorie);
+  });
+  return cats;
+}
+
+function buildSidebar() {
+  const list = document.getElementById('cat-list');
+  const cats = getCategories();
+  list.innerHTML = cats.map(cat => {
+    const count = cat === 'Toutes' ? allRecipes.length
+      : allRecipes.filter(r => r.categorie === cat).length;
+    const icon = CATEGORY_META[cat]?.icon ?? '📄';
+    return `
+      <li>
+        <button class="cat-btn ${cat === activeCategory ? 'active' : ''}"
+                data-cat="${cat}">
+          <span class="cat-icon">${icon}</span>
+          <span>${cat}</span>
+          <span class="cat-count">${count}</span>
+        </button>
+      </li>`;
+  }).join('');
+
+  list.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.cat;
+      document.getElementById('search').value = '';
+      buildSidebar();
+      render();
+    });
+  });
+}
+
+// ─── Render ───────────────────────────────────────────────────────────
+function render(query = '') {
+  const main = document.getElementById('main-content');
+  const q = query.trim().toLowerCase();
+
+  let filtered = allRecipes.filter(r => {
+    const matchCat = activeCategory === 'Toutes' || r.categorie === activeCategory;
+    const matchQ = !q || r.nom.toLowerCase().includes(q)
+                      || r.categorie.toLowerCase().includes(q)
+                      || (r.tags || []).some(t => t.toLowerCase().includes(q));
+    return matchCat && matchQ;
+  });
+
+  if (filtered.length === 0) {
+    main.innerHTML = `
+      <div class="empty">
+        <div style="font-size:2.5rem">🔍</div>
+        <p>Aucune recette trouvée pour <strong>${query || activeCategory}</strong>.</p>
+      </div>`;
+    return;
+  }
+
+  // Group by category
+  const grouped = {};
+  filtered.forEach(r => {
+    if (!grouped[r.categorie]) grouped[r.categorie] = [];
+    grouped[r.categorie].push(r);
+  });
+
+  // Order categories
+  const ORDER = Object.keys(CATEGORY_META).filter(k => k !== 'Toutes');
+  const sortedCats = Object.keys(grouped).sort((a, b) => {
+    const ia = ORDER.indexOf(a); const ib = ORDER.indexOf(b);
+    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+  });
+
+  main.innerHTML = sortedCats.map(cat => {
+    const icon = CATEGORY_META[cat]?.icon ?? '📄';
+    const cards = grouped[cat].map(r => `
+      <a class="recipe-card" href="recettes/${r.fichier}" target="_blank" rel="noopener">
+        <div class="recipe-card-icon">${icon}</div>
+        <div class="recipe-card-name">${r.nom}</div>
+        <div class="recipe-card-meta">
+          ${(r.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}
+        </div>
+      </a>`).join('');
+
+    return `
+      <section class="cat-section">
+        <h2 class="cat-section-title">${icon} ${cat}</h2>
+        <div class="recipe-grid">${cards}</div>
+      </section>`;
+  }).join('');
+}
+
+// ─── Search ───────────────────────────────────────────────────────────
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value;
+  if (q) { activeCategory = 'Toutes'; buildSidebar(); }
+  render(q);
+});
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+[
+  {
+    "nom": "Crêpes au sirop d'érable",
+    "categorie": "Déjeuners / Brunchs",
+    "fichier": "crepes-sirop-erable.pdf",
+    "tags": ["rapide", "sucré"]
+  },
+  {
+    "nom": "Omelette aux fines herbes",
+    "categorie": "Déjeuners / Brunchs",
+    "fichier": "omelette-fines-herbes.pdf",
+    "tags": ["rapide", "végé"]
+  },
+  {
+    "nom": "Soupe à l'oignon gratinée",
+    "categorie": "Entrées / Soupes",
+    "fichier": "soupe-oignon.pdf",
+    "tags": ["hivernal", "classique"]
+  },
+  {
+    "nom": "Velouté de courge butternut",
+    "categorie": "Entrées / Soupes",
+    "fichier": "veloute-courge.pdf",
+    "tags": ["automne", "végé"]
+  },
+  {
+    "nom": "Salade niçoise",
+    "categorie": "Salades",
+    "fichier": "salade-nicoise.pdf",
+    "tags": ["été", "poisson"]
+  },
+  {
+    "nom": "Salade César maison",
+    "categorie": "Salades",
+    "fichier": "salade-cesar.pdf",
+    "tags": ["classique"]
+  },
+  {
+    "nom": "Pâtes carbonara",
+    "categorie": "Pâtes",
+    "fichier": "pates-carbonara.pdf",
+    "tags": ["rapide", "classique"]
+  },
+  {
+    "nom": "Lasagnes à la bolognaise",
+    "categorie": "Pâtes",
+    "fichier": "lasagnes-bolognaise.pdf",
+    "tags": ["familial", "viande"]
+  },
+  {
+    "nom": "Poulet rôti au citron et thym",
+    "categorie": "Plats — Viande",
+    "fichier": "poulet-roti-citron.pdf",
+    "tags": ["classique", "dimanche"]
+  },
+  {
+    "nom": "Bœuf bourguignon",
+    "categorie": "Plats — Viande",
+    "fichier": "boeuf-bourguignon.pdf",
+    "tags": ["hivernal", "mijotage"]
+  },
+  {
+    "nom": "Filet de saumon en croûte d'herbes",
+    "categorie": "Plats — Poisson & Fruits de mer",
+    "fichier": "saumon-croute-herbes.pdf",
+    "tags": ["rapide", "élégant"]
+  },
+  {
+    "nom": "Crevettes à l'ail et beurre",
+    "categorie": "Plats — Poisson & Fruits de mer",
+    "fichier": "crevettes-ail-beurre.pdf",
+    "tags": ["rapide", "apéro"]
+  },
+  {
+    "nom": "Curry de pois chiches",
+    "categorie": "Plats — Végétarien",
+    "fichier": "curry-pois-chiches.pdf",
+    "tags": ["végé", "épicé"]
+  },
+  {
+    "nom": "Tarte aux légumes rôtis",
+    "categorie": "Plats — Végétarien",
+    "fichier": "tarte-legumes-rotis.pdf",
+    "tags": ["végé", "été"]
+  },
+  {
+    "nom": "Tarte tatin aux pommes",
+    "categorie": "Desserts / Pâtisseries",
+    "fichier": "tarte-tatin.pdf",
+    "tags": ["classique", "automne"]
+  },
+  {
+    "nom": "Fondant au chocolat",
+    "categorie": "Desserts / Pâtisseries",
+    "fichier": "fondant-chocolat.pdf",
+    "tags": ["chocolat", "rapide"]
+  }
+]
