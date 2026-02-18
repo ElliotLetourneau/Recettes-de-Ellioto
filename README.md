@@ -41,6 +41,7 @@ mon-recueil/
 | `Plats — Poisson & Fruits de mer` | |
 | `Plats — Végétarien` | |
 | `Accompagnements` | |
+| `Cocktails` | |
 | `Desserts / Pâtisseries` | |
 
 > ⚠️ Respecte l'orthographe exacte de la catégorie, sinon elle apparaîtra en doublon.
