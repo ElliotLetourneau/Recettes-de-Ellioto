@@ -36,8 +36,8 @@
     "tags": ["Di Stasio", "penne", "épinards", "saucisses", "DiStasio"]
   },
   {
-    "nom": "Pâtes carbonara",
-    "categorie": "Pâtes",
+    "nom": "test",
+    "categorie": "Accompagnements",
     "fichier": "pates-carbonara.pdf",
     "tags": ["rapide", "classique"]
   },
